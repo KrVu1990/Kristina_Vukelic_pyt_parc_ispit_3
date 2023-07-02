@@ -18,3 +18,11 @@ class Post(db.Model):
 
     def __repr__(self):
         return '<Post {}>'.format(self.body)
+
+class Prices(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    article_name = db.Column(db.String(140), unique=True)
+    price = db.Column(db.Integer)
+
+    def __repr__(self):
+        return '<Price {}>'.format(self.article_name)

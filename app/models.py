@@ -26,3 +26,13 @@ class Prices(db.Model):
 
     def __repr__(self):
         return '<Price {}>'.format(self.article_name)
+
+class Article(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    order_number = db.Column(db.Integer, unique=True)
+    article_name = db.Column(db.String(140), unique=True)
+    description = db.Column(db.String(140))
+    price = db.Column(db.Integer)
+
+    def __repr__(self):
+        return '<Article {}>'.format(self.article_name)

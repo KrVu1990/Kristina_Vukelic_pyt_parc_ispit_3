@@ -1,7 +1,7 @@
 from flask import render_template, flash, redirect, url_for
 from app import app, db
 from app.forms import LoginForm
-from app.models import Prices
+from app.models import Prices, Article
 
 @app.route('/')
 @app.route('/index')
@@ -30,7 +30,8 @@ def login():
 
 @app.route('/katalog')
 def katalog():
-    return render_template('katalog.html', title='Katalog')
+    articles = Article.query.all()
+    return render_template('katalog.html', title='Katalog', articles=articles)
 
 @app.route('/cjenik')
 def cjenik():

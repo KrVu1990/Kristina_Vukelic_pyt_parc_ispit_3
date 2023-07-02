@@ -1,24 +1,11 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <div class="container-fluid full-screen-container" style="background-image: url('https://i.ebayimg.com/thumbs/images/g/OzcAAOSwzFpjPz9i/s-l640.jpg');color: white;padding: 0;margin: 0;min-height: 100vh;background-size: cover;background-position: center;color:white;">
-        <h1>Dobrodošli u Konchichi webshop</h1>
-        <p>Istražite našu predivnu kolekciju unikatnog ručno rađenog nakita.</p>
-        <p>Svaki komad je pažljivo izrađen s ljubavlju i strašću za detaljima.</p>
-
-        <!-- <div class="row">
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <img src="putanja/do/slike1.jpg" class="card-img-top" alt="Nakit 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Nakit 1</h5>
-                        <p class="card-text">Opis nakita 1.</p>
-                        <a href="#" class="btn btn-primary">Detalji</a>
-                    </div>
-                </div>
-            </div>            
-        </div> -->
-    </div>
+<div class="container-fluid full-screen-container" style="background-image: url('{{ url_for('static', filename='logo.jpg') }}'); color: white; padding: 0; margin: 0; min-height: 100vh; background-size: cover; background-position: center;">
+    <h1 style="font-size: 2.5rem;">Dobrodošli u Konchichi webshop</h1>
+    <p style="font-size: 1.25rem;">Istražite našu predivnu kolekciju unikatnog ručno rađenog nakita.</p>
+    <p style="font-size: 1.25rem;">Svaki komad je pažljivo izrađen s ljubavlju i strašću za detaljima.</p>
+</div>
 {% endblock %}
 
 {% block styles %}

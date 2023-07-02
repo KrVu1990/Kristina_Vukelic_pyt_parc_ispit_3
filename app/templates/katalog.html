@@ -8,7 +8,7 @@
             {% for article in articles %}
             <div class="col-md-4">
                 <div class="card mb-4">
-                    <img src="{{ article.image_url }}" class="card-img-top" alt="{{ article.article_name }}">
+                    <img src="{{ url_for('static', filename=article.article_name + '.jpg') }}" style="max-height: 355px" class="card-img-top" alt="{{ article.article_name }}">
                     <div class="card-body">
                         <h5 class="card-title">{{ article.article_name }}</h5>
                         <p class="card-text">{{ article.description }}</p>

@@ -26,3 +26,11 @@ def login():
             form.username.data, form.remember_me.data))
         return redirect(url_for('index'))
     return render_template('login.html', title='Sign In', form=form)
+
+@app.route('/katalog')
+def katalog():
+    return render_template('katalog.html', title='Katalog')
+
+@app.route('/cjenik')
+def cjenik():
+    return render_template('cjenik.html', title='Cjenik')
